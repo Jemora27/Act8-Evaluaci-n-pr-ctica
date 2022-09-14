@@ -72,6 +72,10 @@ class Player(models.Model):
 
     def foto(self):
         return format_html ('<img src= {} width="80" height="80" />', self.photo.url)
+    
+    def Nacionalidad(self):
+        return format_html ('<img src= {} width="90" height="55" />', self.nationality.flag.url)
+
 
     def __str__(self):
         return self.name
@@ -93,6 +97,9 @@ class Technical(models.Model):
 
     def foto(self):
         return format_html ('<img src= {} width="70" height="100" />', self.photo.url)
+
+    def Selección(self):
+        return format_html ('<img src= {} width="80" height="80" />', self.soccer_team.shield.url)
 
     def __str__(self):
         return self.name

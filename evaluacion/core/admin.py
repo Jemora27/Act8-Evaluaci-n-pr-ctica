@@ -10,13 +10,13 @@ class SoccerTeamAdmin(admin.ModelAdmin):
 
 @admin.register(Player)
 class PlayerAdmin(admin.ModelAdmin):
-    list_display = ("foto", "name", "surname", "position", "holder")
+    list_display = ("Nacionalidad", "foto", "name", "surname", "position", "holder")
     list_editable = ("holder",)
     list_filter = ["position", "nationality"]
 
 @admin.register(Technical)
 class TachnicalAdmin(admin.ModelAdmin):
-    list_display = ("foto", "name", "surname", "nationality", "rol")
+    list_display = ("foto", "name", "surname", "nationality", "rol", "Selección")
     list_filter = ["rol", "soccer_team"]
 
     
