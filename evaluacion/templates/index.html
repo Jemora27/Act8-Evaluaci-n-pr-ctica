@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="icon" href="{% static 'images/logo.png' %}">
+    <link rel="stylesheet" href="{% static 'css/styleF.css' %}">
+    <title>FIFA WORLD CUP QATAR 2022</title>
+</head>
+
+<header>
+    <div class="container-fluid nav">
+        <div class="row bar">
+            <div class="col-sm-2 column">
+                <img src="{% static 'images/logo1.png' %}" width="120px" height="120px" alt="">
+            </div>
+
+            <div class="col-sm-10 column">
+                <h1 class="titulo">FIFA WORLD CUP QATAR 2022</h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="contenido">
+        <div class="container cont-text">
+            <h1 class="texto">Bienvenido, aqui podrás agregar las diferentes selecciones (Con sus respectivos jugadores y equipo técnico) que participarán en el Mundial Qatar 2022</h1>
+        </div>
+    </div>
+    <div>
+        <div class="container cont">
+            <a href="{% url 'admin:index' %}"><button class="btn text-light boton">Editar o agregar información de las selecciones</button></a>
+        </div>
+    </div>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

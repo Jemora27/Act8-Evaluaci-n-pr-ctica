@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.nav{
+    background-color: #141414;
+}
+
+.bar{
+    width: 100%;
+    padding: 15px;
+}
+
+.column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.titulo{
+    font-size: 60px;
+}
+
+.contenido{
+    padding: 30px;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.cont-text{
+    background-color: #030d4a;
+    color: #fff;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    border-radius: 40px;
+}
+.texto{
+    padding: 15px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton{
+    padding: 10px 15px;
+    border-radius: 30px; 
+    font-size: 25px; 
+    background-color: #113fd1;;
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.boton:hover{
+    background-color: #112786;
+    color: #b6b6b6;
+}
+
+body{
+    height: 100%; 
+    width: 100%;
+    background-image: url(../images/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+}
