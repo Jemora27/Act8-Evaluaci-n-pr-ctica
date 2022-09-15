@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.redes{
+    width: 100%;
+    font-size: 28px;
+    padding-top: 10px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.redes > *{
+    padding: 0 5px;
+}
+
+.nav{
+    background-color: #141414;
+}
+
+.bar{
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    /* border: 2px solid #fff; */
+}
+
+.t{
+    font-size: 50px;
+}
+
+.body{
+    flex-wrap: wrap;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 30px;
+}
+
+.cont-text{
+    background-color: #030d4a;
+    color: #fff;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    border-radius: 40px;
+}
+.texto{
+    padding: 15px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton{
+    padding: 10px 15px;
+    border-radius: 30px; 
+    font-size: 25px; 
+    background-color: #113fd1;
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.boton:hover{
+    background-color: #112786;
+    color: #b6b6b6;
+}
+
+.icon{
+    font-size: 40px;
+}
+
+.login{
+    text-decoration: none;
+    font-size: 28px;
+    color: #983250;
+    display: flex;
+    align-items: center;
+}
+
+.login:hover{
+    color: #ba768a;
+}
+
+.login > *{
+    padding: 0px 10px;
+}
+
+.fifa_cont{
+    /* padding-top: 300px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+.fifa{
+    text-decoration: none;
+    color: #fff;
+}
+
+.fifa:hover{
+    color: #b6b6b6;
+}
+
+body{
+    height: 100%; 
+    width: 100%;
+    background-image: url(../images/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+}
+
+.bodys{
+    height: 100%; 
+    width: 100%;
+    background-image: url(../images/fondo3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+}
+
+footer{
+    background-color: #141414;
+}
+
+#eye1{
+    display: none;
+}
+
+.form-main{
+    min-height: 100vh;
+    padding: 60px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-cont{
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    z-index: 1;
+}
+
+.form-cont .box{
+    box-shadow: 0 0 25px #222;
+    border-color: #000;
+    border: 1px solid #000;
+    padding: 40px 50px;
+    border-radius: 20px;
+    backdrop-filter: blur(2px);
+}
+
+.form-cont h3{
+    font-size: 28x;
+    text-align: center;
+    line-height: 1.2;
+    color: #000;
+    font-weight: 500;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+.form-cont form{
+    margin: 25px 0 20px;
+}
+
+.form-cont .input.box{
+    margin-bottom: 25px;
+}
+
+.form-cont label{
+    color: #000;
+    font-weight: bold;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+.form-cont .input-control{
+    display: block;
+    height: 45px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.form-control:focus{
+    outline: none;
+}
+
+.form-cont .input-control:focus{
+    outline: none;
+}
+
+.form-cont .btn-login{
+    height: 45px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 25px;
+    user-select: none;
+    background-color: #000;
+    border: none;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: background-color 0.5s ease;
+}
+
+.form-cont .btn-login:hover{
+    background-color: #292929;
+}
