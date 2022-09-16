@@ -62,11 +62,40 @@ def contacto(request):
         )
 
         email.attach_alternative(content, 'text/html')
+       
+        email.fail_silently = False
+        email.send()
+
+    return render(request, 'contacto.html',{
+        
+    })
+
+def contactoInter(request):
+    if request.method == "POST":
+        email = request.POST['email']
+        user = request.POST['user']
+        message = request.POST['message']
+        context = {
+            'email': email,
+            'user': user,
+            'message': message
+        }
+        template = get_template('email_template.html')
+        content = template.render(context)
+
+        email = EmailMultiAlternatives(
+            'FIFA WORLD CUP QATAR 2022',
+            'FIFA WORLD CUP QATAR 2022',
+            settings.EMAIL_HOST_USER,
+            ['jo74ra@gmail.com']
+        )
+
+        email.attach_alternative(content, 'text/html')
     
         email.fail_silently = False
         email.send()
     
-    return render(request, 'contacto.html',{
+    return render(request, 'contacto_inter.html',{
 
     })
 	 

@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="icon" href="{% static 'images/logo.png' %}">
+    <link rel="stylesheet" href="{% static 'css/styleFF.css' %}">
+    <title>Contacto - FIFA WORLD CUP QATAR 2022</title>
+</head>
+
+<header>
+    <div class="container-fluid nav">
+        <div class="redes">
+            <a href="https://twitter.com/FIFAcom" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.facebook.com/fifa" target="_blank"><i class="fa fa-facebook-official "></i></a>
+            <a href="https://www.instagram.com/fifaworldcup/" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.youtube.com/FIFATV" target="_blank"><i class="fa fa-youtube-play"></i></a>
+        </div>
+        <div class="row bar">
+            <div class="col-sm-2 column">
+                <a href="{% url 'interface' %}">
+                    <img src="{% static 'images/logo1.png' %}" width="145px" height="145px" alt="">
+                </a>
+            </div>
+
+            <div class="col-sm-7 column">
+                <h1 class="ti">FIFA WORLD CUP QATAR 2022<i class="fa fa-futbol-o icon-t"></i></h1>
+            </div>
+
+            <div class="col-sm-3 column">
+                <a href="{% url 'logout' %}" class="login"><i class="fas fa-sign-out icon"></i>Cerrar Sesión</a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="notification-succes">
+    {% if messages %}
+        {% for message in messages %}
+            <div>
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>
+<body class="bodyss">
+    <div class="contact-cont">
+        <div class="box-contact">
+            <h3>Contáctenos</h3>
+            <form action="{% url 'contactoInter' %}" method="post" class="needs-validation" novalidate>
+                {% csrf_token %}
+                <div class="input">
+                    <i class="fa fa-envelope icon-contact i-email"></i>
+                    <input type="text" name="email" placeholder="Email" required class="input-contact">
+                    <div class="valid-feedback">     
+                        Ok
+                    </div>
+                    <div class="invalid-feedback">
+                        El email ingresado no es válido.
+                    </div>
+                </div>
+                <div class="input">
+                    <i class="fa fa-user icon-contact i-users"></i>
+                    <input type="text" name="user" placeholder="Nombre de Usuario" required class="input-contact">
+                    <div class="valid-feedback">     
+                        Ok
+                    </div>
+                    <div class="invalid-feedback">
+                        El usuario ingresado no es válido.
+                    </div>
+                </div>
+                <div class="input">
+                    <i class="fa fa-commenting icon-contact i-messa"></i>
+                    <textarea placeholder="Mensaje" name="message" cols="30" rows="1" required class="input-contact"></textarea>
+                    <div class="valid-feedback">     
+                        Ok
+                    </div>
+                    <div class="invalid-feedback">
+                        El mensaje ingresado no es válido.
+                    </div>
+                </div>
+                <button class="btn-login" type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/dbfa2f0f7e.js" crossorigin="anonymous"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+<footer>
+    <div class="container fifa_cont">
+        <a href="https://www.fifa.com/es" target="_blank" class="fifa">WWW.FIFA.COM</a>
+    </div>
+</footer>
+<!-- Script validation -->
+
+<script>
+		
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+'use strict'
+
+// Fetch all the forms we want to apply custom Bootstrap validation styles to
+var forms = document.querySelectorAll('.needs-validation')
+
+// Loop over them and prevent submission
+Array.prototype.slice.call(forms)
+.forEach(function (form) {
+  form.addEventListener('submit', function (event) {
+    if (!form.checkValidity()) {
+      event.preventDefault()
+      event.stopPropagation()
+    }
+
+    form.classList.add('was-validated')
+  }, false)
+})
+})()
+
+</script>
+</html>

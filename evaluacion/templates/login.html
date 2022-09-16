@@ -38,6 +38,15 @@
         <div class="form-cont">
             <div class="box">
                 <h3>Bienvenido</h3>
+                <div class="notification-error">
+                    {% if messages %}
+                        {% for message in messages %}
+                        <div>
+                            <i class="fa fa-times-circle"></i> {{ message }}
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
                 <form method="post" class="needs-validation" novalidate>
                 {% csrf_token %}
                     <div class="input-box">

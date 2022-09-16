@@ -36,7 +36,15 @@
         </div>
     </div>
 </header>
-
+<div class="notification-succes">
+    {% if messages %}
+        {% for message in messages %}
+            <div>
+                <i class="fa fa-check-circle icon-succes"></i> {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>
 <body>
     <div class="body">
         <div>

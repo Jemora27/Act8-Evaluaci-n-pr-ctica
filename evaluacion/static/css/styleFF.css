@@ -402,3 +402,32 @@ footer{
 .contact-cont .btn-login:hover{
     background-color: #8e1d4f;
 }
+
+/* Mensajes----------------------------------------------------------------------------------------------- */
+.notification-succes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #009D71;
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 15px;
+}
+
+.notification-succes > *{
+    padding: 0 10px;
+}
+
+.notification-error{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #ff0000;
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 15px;
+}
+
+.notification-error > *{
+    padding: 0 10px;
+}
