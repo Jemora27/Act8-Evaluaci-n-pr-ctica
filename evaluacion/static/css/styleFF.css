@@ -15,6 +15,11 @@
     display: flex;
     justify-content: end;
     align-items: center;
+    transition: color 0.4s ease-in-out;
+}
+
+.redes:hover{
+    color: #0a58ca;
 }
 
 .redes > *{
@@ -46,6 +51,10 @@
     font-size: 50px;
 }
 
+.icon-t{
+    font-size: 60px;
+}
+
 .body{
     flex-wrap: wrap;
     display: flex;
@@ -74,17 +83,46 @@
     align-items: center;
 }
 
+.cont > *{
+    padding: 0 10px;
+}
+
 .boton{
     padding: 10px 15px;
     border-radius: 30px; 
     font-size: 25px; 
     background-color: #113fd1;
+    color: #fff;
     font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.boton > *{
+    padding: 0 10px;
 }
 
 .boton:hover{
     background-color: #112786;
-    color: #b6b6b6;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.boton-pqr{
+    padding: 10px 15px;
+    border-radius: 30px; 
+    font-size: 25px; 
+    background-color: #98B9F2;
+    color: #000;
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.boton-pqr > *{
+    padding: 0 10px;
+}
+
+.boton-pqr:hover{
+    background-color: #80A9EF;
+    border: 1px solid #fff;
+    color: #000;
 }
 
 .icon{
@@ -97,6 +135,7 @@
     color: #983250;
     display: flex;
     align-items: center;
+    transition: color 0.4s ease-in-out;
 }
 
 .login:hover{
@@ -146,9 +185,7 @@ footer{
     background-color: #141414;
 }
 
-#eye1{
-    display: none;
-}
+/* Login---------------------------------------------------------------------------------------------------- */
 
 .form-main{
     min-height: 100vh;
@@ -189,12 +226,6 @@ footer{
 
 .form-cont .input.box{
     margin-bottom: 25px;
-}
-
-.form-cont label{
-    color: #000;
-    font-weight: bold;
-    font-family: 'Noto Sans Display', sans-serif;
 }
 
 .form-cont .input-control{
@@ -239,4 +270,135 @@ footer{
 
 .form-cont .btn-login:hover{
     background-color: #292929;
+}
+
+.input-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-box > *{
+    padding: 0 5px;
+}
+
+.input-control::placeholder{
+    color: #141414;
+    opacity: 1;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+.icon-login{
+    font-size: 25px;
+}
+.i-user{
+    color: #000;
+}
+.i-pass{
+    color: #FCA311;
+}
+
+/* Contacto----------------------------------------------------------------------------------------------- */
+
+.ti{
+    font-size: 50px;
+}
+
+.ti > *{
+    padding: 0 10px;
+}
+
+.bodyss{
+    height: 100%; 
+    width: 100%;
+    background-image: url(../images/fondo4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.contact-cont{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box-contact{
+    box-shadow: 0 0 25px #222;
+    padding: 40px;
+    border: 2px solid #740a41;
+    border-radius: 10px;
+}
+
+.box-contact h3{
+    display: flex;
+    justify-content: center;
+    font-family: 'Noto Sans Display', sans-serif;
+    color: #740a41;
+    border-bottom: 1px solid #740a41;
+    padding-bottom: 10px;
+}
+
+.input{
+    padding: 13px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input > *{
+    padding: 0 5px;
+}
+
+.icon-contact{
+    font-size: 20px;
+}
+
+.input-contact{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #dcad64;
+}
+
+.input-contact::placeholder{
+    color: #292929;
+    opacity: 0.7;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+.input-contact:focus{
+    outline: none;
+}
+.i-email{
+    color: #d92323;
+}
+.users{
+    color: #141414;
+}
+.i-messa{
+    color: #1c1ce8;
+}
+.contact-cont .btn-login{
+    height: 45px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 25px;
+    user-select: none;
+    background-color: #740a41;
+    border: none;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: background-color 0.5s ease;
+}
+
+.contact-cont .btn-login:hover{
+    background-color: #8e1d4f;
 }

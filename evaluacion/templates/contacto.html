@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="icon" href="{% static 'images/logo.png' %}">
     <link rel="stylesheet" href="{% static 'css/styleFF.css' %}">
-    <title>Inicio de sesión - FIFA WORLD CUP QATAR 2022</title>
+    <title>Contacto - FIFA WORLD CUP QATAR 2022</title>
 </head>
 
 <header>
@@ -26,61 +26,66 @@
                 </a>
             </div>
 
-            <div class="col-sm-10 column">
-                <h1 class="t">FIFA WORLD CUP QATAR 2022<i class="fa fa-futbol-o icon-t"></i></h1>
+            <div class="col-sm-7 column">
+                <h1 class="ti">FIFA WORLD CUP QATAR 2022<i class="fa fa-futbol-o icon-t"></i></h1>
+            </div>
+
+            <div class="col-sm-3 column">
+                <a href="{% url 'login' %}" class="login"><i class="fas fa-user icon"></i>Iniciar Sesión</a>
             </div>
         </div>
     </div>
 </header>
 
-<body class="bodys">
-    <div class="form-main">
-        <div class="form-cont">
-            <div class="box">
-                <h3>Bienvenido</h3>
-                <form method="post" class="needs-validation" novalidate>
+<body class="bodyss">
+    <div class="contact-cont">
+        <div class="box-contact">
+            <h3>Contáctenos</h3>
+            <form action="{% url 'contacto' %}" method="post" class="needs-validation" novalidate>
                 {% csrf_token %}
-                    <div class="input-box">
-                        <i class="fa fa-user icon-login i-user"></i>
-                        <input name="username" type="text" placeholder="Nombre de Usuario" class="input-control">
-                        <div class="valid-feedback">
-                            
-                            Ok
-
-                        </div>
-                        <div class="invalid-feedback">
-                            
-                            Nombre de usuario incorrecto.
-
-                        </div>
+                <div class="input">
+                    <i class="fa fa-envelope icon-contact i-email"></i>
+                    <input type="text" name="email" placeholder="Email" required class="input-contact">
+                    <div class="valid-feedback">     
+                        Ok
                     </div>
-                    <div class="input-box">
-                        <i class="fa fa-key icon-login i-pass"></i>
-                        <input type="password" name="password" placeholder="Contraseña" class="input-control">
-                        <div class="valid-feedback">      
-                            Ok
-                        </div>
-                        <div class="invalid-feedback">
-                            Contraseña incorrecta.
-                        </div>
+                    <div class="invalid-feedback">
+                        El email ingresado no es válido.
                     </div>
-                    <button type="submit" class="btn-login mt-4">Iniciar Sesión</button>
-                </form>
-            </div>
+                </div>
+                <div class="input">
+                    <i class="fa fa-user icon-contact i-users"></i>
+                    <input type="text" name="user" placeholder="Nombre de Usuario" required class="input-contact">
+                    <div class="valid-feedback">     
+                        Ok
+                    </div>
+                    <div class="invalid-feedback">
+                        El usuario ingresado no es válido.
+                    </div>
+                </div>
+                <div class="input">
+                    <i class="fa fa-commenting icon-contact i-messa"></i>
+                    <textarea placeholder="Mensaje" name="message" cols="30" rows="1" required class="input-contact"></textarea>
+                    <div class="valid-feedback">     
+                        Ok
+                    </div>
+                    <div class="invalid-feedback">
+                        El mensaje ingresado no es válido.
+                    </div>
+                </div>
+                <button class="btn-login" type="submit">Enviar</button>
+            </form>
         </div>
     </div>
 
-    <script src="{% static 'js/contraseña.js' %}"></script>
     <script src="https://kit.fontawesome.com/dbfa2f0f7e.js" crossorigin="anonymous"></script>
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 </body>
-
 <footer>
     <div class="container fifa_cont">
         <a href="https://www.fifa.com/es" target="_blank" class="fifa">WWW.FIFA.COM</a>
     </div>
 </footer>
-
 <!-- Script validation -->
 
 <script>
@@ -107,5 +112,4 @@ Array.prototype.slice.call(forms)
 })()
 
 </script>
-
 </html>
